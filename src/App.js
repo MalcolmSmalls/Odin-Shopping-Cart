@@ -8,7 +8,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 function App() {
 
   const [ cart, setCart ] = React.useState(0)
+  const [ count, setCount] = React.useState(0)
 
+
+  function handleAdd(){
+    setCount(prevCount => prevCount + 1)
+  }
+
+  function handleMinus(){
+    setCount(prevCount => prevCount - 1)
+  }
 
   return (
     <div>
@@ -16,7 +25,7 @@ function App() {
         <Nav items={cart} />
         <Routes>
           <Route path  = "/" element = {<Home />}/>
-          <Route path = "/Shop/" element = {<Shop />}/>
+          <Route path = "/Shop/" element = {<Shop handleMinus={handleMinus} handleAdd={handleAdd} count={count} />}/>
         </Routes>
       
       </BrowserRouter>
