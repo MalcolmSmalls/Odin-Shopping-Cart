@@ -1,7 +1,8 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-export default function Nav () {
+
+export default function Nav (props) {
     return (
        <nav>
         <ul className = "li-links">
@@ -13,7 +14,8 @@ export default function Nav () {
             </Link>
         </ul>
 
-
+        <h2>{props.items}</h2>
+        <button>Check Out</button>
 
        </nav>
     )

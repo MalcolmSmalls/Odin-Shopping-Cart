@@ -1,8 +1,15 @@
 import React from "react"
+import Nav from "./Nav"
 
 export default function Shop () {
+
+
+
     return (
-        <h1>Shop</h1>
+        <div>
+            <h1>Shop</h1>
+        </div>
+
     )
 
 }

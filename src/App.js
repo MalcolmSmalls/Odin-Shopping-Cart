@@ -6,10 +6,14 @@ import Shop from "./Components/Shop"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
+
+  const [ cart, setCart ] = React.useState(0)
+
+
   return (
     <div>
       <BrowserRouter>
-        <Nav />
+        <Nav items={cart} />
         <Routes>
           <Route path  = "/" element = {<Home />}/>
           <Route path = "/Shop/" element = {<Shop />}/>
