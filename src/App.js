@@ -19,13 +19,17 @@ function App() {
     setCount(prevCount => prevCount - 1)
   }
 
+  function handleCart(){
+    setCart(prevCart => prevCart + count )
+  }
+
   return (
     <div>
       <BrowserRouter>
         <Nav items={cart} />
         <Routes>
           <Route path  = "/" element = {<Home />}/>
-          <Route path = "/Shop/" element = {<Shop handleMinus={handleMinus} handleAdd={handleAdd} count={count} />}/>
+          <Route path = "/Shop/" element = {<Shop handleMinus={handleMinus} handleAdd={handleAdd} count={count} handleCart = {handleCart} />}/>
         </Routes>
       
       </BrowserRouter>

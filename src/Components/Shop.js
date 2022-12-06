@@ -15,6 +15,7 @@ export default function Shop (props) {
                        placeholder={props.count}
                        value={props.count}/>
                 <button onClick={props.handleAdd}>+</button>
+                <button onClick={props.handleCart}>Add to cart</button>
             </div>
         </div>
 
